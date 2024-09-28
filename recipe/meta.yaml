@@ -1,5 +1,5 @@
 {% set name = "peepdb" %}
-{% set version = "0.1.3" %}
+{% set version = "0.1.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/peepdb-{{ version }}.tar.gz
-  sha256: 87a01c6fa7ef726063f6953b91fbf8e27c980c3229243f19fb407c489f037748
+  sha256: 10c8af8b1b552408175d6d163975bb7ed0f54d3d74e3ea29fd45438a07e456f0
 
 build:
   entry_points:
