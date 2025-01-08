@@ -14,15 +14,15 @@ build:
     - peepdb=peepdb.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - mysql-connector-python >=9.0.0
     - psycopg2-binary >=2.9.9
     - pymysql >=1.1.1
@@ -43,6 +43,7 @@ test:
     - peepdb --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/evangelosmeklis/peepdb
